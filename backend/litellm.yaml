@@ -1,0 +1,342 @@
+# backend models
+model_list:
+
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: openai/gpt-4o-mini
+      api_key: os.environ/FREEV36_API_KEY
+      api_base: os.environ/FREEV36_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 12
+      tpm: 20000
+
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: openai/gpt-4o-mini
+      api_key: os.environ/CHATANYWHEREFREE_API_KEY
+      api_base: os.environ/CHATANYWHEREFREE_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 9
+      tpm: 15000
+
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: openai/gpt-4o-mini-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.00000075
+      output_cost_per_token: 0.000003
+      rpm: 6
+      tpm: 10000
+
+  - model_name: gpt-4o
+    litellm_params:
+      model: openai/gpt-4o
+      api_key: os.environ/CHATANYWHEREFREE_API_KEY
+      api_base: os.environ/CHATANYWHEREFREE_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 9
+      tpm: 15000
+
+  - model_name: gpt-4o
+    litellm_params:
+      model: openai/gpt-4o-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.00001
+      output_cost_per_token: 0.00004
+      rpm: 6
+      tpm: 10000
+
+  - model_name: gpt-4.1
+    litellm_params:
+      model: openai/gpt-4.1
+      api_key: os.environ/CHATANYWHEREFREE_API_KEY
+      api_base: os.environ/CHATANYWHEREFREE_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 9
+      tpm: 15000
+
+  - model_name: gpt-4.1
+    litellm_params:
+      model: openai/gpt-4.1-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000008
+      output_cost_per_token: 0.000032
+      rpm: 6
+      tpm: 10000
+
+  - model_name: gpt-4.1-mini
+    litellm_params:
+      model: openai/gpt-4.1-mini
+      api_key: os.environ/CHATANYWHEREFREE_API_KEY
+      api_base: os.environ/CHATANYWHEREFREE_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 9
+      tpm: 15000
+
+  - model_name: gpt-4.1-mini
+    litellm_params:
+      model: openai/gpt-4.1-mini-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000016
+      output_cost_per_token: 0.0000064
+      rpm: 6
+      tpm: 10000
+
+  - model_name: gpt-4.1-nano
+    litellm_params:
+      model: openai/gpt-4.1-mini
+      api_key: os.environ/CHATANYWHEREFREE_API_KEY
+      api_base: os.environ/CHATANYWHEREFREE_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 9
+      tpm: 15000
+
+  - model_name: gpt-4.1-nano
+    litellm_params:
+      model: openai/gpt-4.1-mini-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000004
+      output_cost_per_token: 0.000003
+      rpm: 6
+      tpm: 10000
+
+  - model_name: gpt-5
+    litellm_params:
+      model: openai/gpt-5-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000005
+      output_cost_per_token: 0.00004
+      rpm: 4
+      tpm: 7500
+
+  - model_name: gpt-5-mini
+    litellm_params:
+      model: openai/gpt-5-mini-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000001
+      output_cost_per_token: 0.000008
+      rpm: 6
+      tpm: 10000
+
+  - model_name: gpt-5-nano
+    litellm_params:
+      model: openai/gpt-5-nano-ca
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000002
+      output_cost_per_token: 0.0000016
+      rpm: 6
+      tpm: 10000
+
+  - model_name: o3
+    litellm_params:
+      model: openai/o3
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000014
+      output_cost_per_token: 0.000056
+      rpm: 1
+      tpm: 5000
+
+  - model_name: o1
+    litellm_params:
+      model: openai/o1
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.00012
+      output_cost_per_token: 0.00048
+      rpm: 1
+      tpm: 5000
+
+  - model_name: gemini-2.5-pro
+    litellm_params:
+      model: openai/gemini-2.5-pro
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000007
+      output_cost_per_token: 0.00004
+      rpm: 6
+      tpm: 10000
+
+  - model_name: gemini-2.5-flash
+    litellm_params:
+      model: openai/gemini-2.5-flash
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000006
+      output_cost_per_token: 0.000014
+      rpm: 6
+      tpm: 10000
+
+  - model_name: claude-opus-4-1
+    litellm_params:
+      model: openai/claude-opus-4-1-20250805
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000024
+      output_cost_per_token: 0.0000072
+      rpm: 6
+      tpm: 10000
+
+  - model_name: claude-sonnet-4
+    litellm_params:
+      model: openai/claude-sonnet-4-20250514
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000015
+      output_cost_per_token: 0.000075
+      rpm: 6
+      tpm: 10000
+
+  - model_name: claude-sonnet-4-thinking
+    litellm_params:
+      model: openai/claude-sonnet-4-20250514-thinking
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000015
+      output_cost_per_token: 0.000075
+      rpm: 6
+      tpm: 10000
+
+  - model_name: grok-4
+    litellm_params:
+      model: openai/grok-4
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.000012
+      output_cost_per_token: 0.00006
+      rpm: 6
+      tpm: 10000
+
+  - model_name: deepseek-r1
+    litellm_params:
+      model: openai/deepseek-ai/DeepSeek-R1
+      api_key: os.environ/SILICONFLOW_API_KEY
+      api_base: os.environ/SILICONFLOW_API_BASE
+      input_cost_per_token: 0.000004
+      output_cost_per_token: 0.000016
+      rpm: 6
+      tpm: 10000
+
+  - model_name: deepseek-r1
+    litellm_params:
+      model: openai/deepseek-r1
+      api_key: os.environ/CHATANYWHEREFREE_API_KEY
+      api_base: os.environ/CHATANYWHEREFREE_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 9
+      tpm: 15000
+
+  - model_name: deepseek-r1
+    litellm_params:
+      model: openai/deepseek-r1
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000024
+      output_cost_per_token: 0.0000096
+      rpm: 6
+      tpm: 10000
+
+  - model_name: deepseek-v3
+    litellm_params:
+      model: openai/deepseek-ai/DeepSeek-V3
+      api_key: os.environ/SILICONFLOW_API_KEY
+      api_base: os.environ/SILICONFLOW_API_BASE
+      input_cost_per_token: 0.000002
+      output_cost_per_token: 0.000008
+
+  - model_name: deepseek-v3
+    litellm_params:
+      model: openai/deepseek-v3
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000024
+      output_cost_per_token: 0.0000096
+      rpm: 6
+      tpm: 10000
+
+  - model_name: deepseek-v3
+    litellm_params:
+      model: openai/deepseek-v3
+      api_key: os.environ/CHATANYWHEREFREE_API_KEY
+      api_base: os.environ/CHATANYWHEREFREE_API_BASE
+      input_cost_per_token: 0
+      output_cost_per_token: 0
+      rpm: 9
+      tpm: 15000
+
+  - model_name: deepseek-v3.1
+    litellm_params:
+      model: openai/deepseek-ai/DeepSeek-V3.1
+      api_key: os.environ/SILICONFLOW_API_KEY
+      api_base: os.environ/SILICONFLOW_API_BASE
+      input_cost_per_token: 0.000004
+      output_cost_per_token: 0.000012
+      rpm: 6
+      tpm: 10000
+
+  - model_name: deepseek-v3.1
+    litellm_params:
+      model: openai/deepseek-v3.1-250821
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000024
+      output_cost_per_token: 0.0000072
+      rpm: 6
+      tpm: 10000
+
+  - model_name: deepseek-v3.1-think
+    litellm_params:
+      model: openai/deepseek-v3.1-think-250821
+      api_key: os.environ/CHATANYWHERE_API_KEY
+      api_base: os.environ/CHATANYWHERE_API_BASE
+      input_cost_per_token: 0.0000024
+      output_cost_per_token: 0.0000072
+      rpm: 6
+      tpm: 10000
+
+  - model_name: glm-4.5
+    litellm_params:
+      model: openai/zai-org/GLM-4.5
+      api_key: os.environ/SILICONFLOW_API_KEY
+      api_base: os.environ/SILICONFLOW_API_BASE
+      input_cost_per_token: 0.0000035
+      output_cost_per_token: 0.000014
+      rpm: 9
+      tpm: 15000
+
+  - model_name: glm-4.5v
+    litellm_params:
+      model: openai/zai-org/GLM-4.5V
+      api_key: os.environ/SILICONFLOW_API_KEY
+      api_base: os.environ/SILICONFLOW_API_BASE
+      input_cost_per_token: 0.000001
+      output_cost_per_token: 0.000006
+      rpm: 9
+      tpm: 15000
+
+litellm_settings:
+  cache: true
+  cache_params:
+    type: local
+
+router_settings:
+  routing_strategy: cost-based-routing
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+
