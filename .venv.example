@@ -1,0 +1,2 @@
+ANTHROPIC_BASE_URL=https://some-url.com
+ANTHROPIC_AUTH_TOKEN=sk-some_secret_key
