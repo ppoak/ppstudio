@@ -53,12 +53,15 @@ class Tools:
                 }
             )
             serp_api_key = __user__["valves"].serp_api_key
-            results = DDGS().text(
-                query, region="cn-zh", max_results=num // 2 if serp_api_key else num
-            )
             content = f"# Search Results of {query}"
-            for result in results:
-                content += f"\n\n## {result['title']}\n\n{result['body']}"
+            try:
+                results = DDGS().text(
+                    query, region="cn-zh", max_results=num // 2 if serp_api_key else num
+                )
+                for result in results:
+                    content += f"\n\n## {result['title']}\n\n{result['body']}"
+            except:
+                content += "\n\nDDGS is not available currently."
             await __event_emitter__(
                 {
                     "type": "status",
@@ -85,7 +88,7 @@ class Tools:
                 for result in results["organic_results"]:
                     content += f"\n\n## {result['title']}\n\n{result.get('snippet', 'Snippet Not Available')}"
                     if result.get("sitelinks", None):
-                        for sitelink in result["sitelinks"]["expanded"]:
+                        for sitelink in result["sitelinks"].get("expanded", []):
                             content += f"\n\n### {sitelink['title']}\n\n{result['link']}\n\n{result.get('snippet', 'Snippet Not Available')}"
                 content += f"\n\n## Knowledge Graph about {query}\n\n```json\n{results.get('knowledge_graph', 'Not Available')}\n```"
 
@@ -137,7 +140,7 @@ class Tools:
             return f"Error when read content: {str(e)}"
 
     async def deep_search(
-        self, query: str, num: int = 10, __user__=None, __event_emitter__=None
+        self, query: str, num: int = 3, __user__=None, __event_emitter__=None
     ):
         """
         Deep search the query extending every webpage in result
@@ -157,9 +160,12 @@ class Tools:
         )
         serp_api_key = __user__["valves"].serp_api_key
         try:
-            results = DDGS().text(
-                query, region="cn-zh", max_results=num // 2 if serp_api_key else num
-            )
+            try:
+                results = DDGS().text(
+                    query, region="cn-zh", max_results=num // 2 if serp_api_key else num
+                )
+            except:
+                results = []
             if serp_api_key:
                 client = serpapi.Client(api_key=serp_api_key)
                 serp_results = dict(
@@ -192,7 +198,7 @@ class Tools:
                 link = result["href"]
                 page_content = self.read_content(link)
                 content += (
-                    f"\n\n## {result['title']}\n\n{result['body']}\n\n{page_content}"
+                    f"\n\n## {result['title']}\n\n{page_content}"
                 )
             await __event_emitter__(
                 {
