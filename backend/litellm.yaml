@@ -118,8 +118,8 @@ model_list:
       api_base: os.environ/CHATANYWHERE_API_BASE
       input_cost_per_token: 0.000005
       output_cost_per_token: 0.00004
-      rpm: 4
-      tpm: 7500
+      rpm: 6
+      tpm: 10000
 
   - model_name: gpt-5-mini
     litellm_params:
@@ -149,7 +149,7 @@ model_list:
       input_cost_per_token: 0.000014
       output_cost_per_token: 0.000056
       rpm: 1
-      tpm: 5000
+      tpm: 10000
 
   - model_name: o1
     litellm_params:
@@ -159,7 +159,7 @@ model_list:
       input_cost_per_token: 0.00012
       output_cost_per_token: 0.00048
       rpm: 1
-      tpm: 5000
+      tpm: 10000
 
   - model_name: gemini-2.5-pro
     litellm_params:
